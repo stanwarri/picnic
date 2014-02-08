@@ -1,0 +1,97 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "hash": "b282266e0d5eff7c5d6a70a14cc4c825",
+    "packages": [
+        {
+            "name": "mjolnic/resthin",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mjolnic/resthin.git",
+                "reference": "1615f3277a03343aa02f1ebd53049282cc271035"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mjolnic/resthin/zipball/1615f3277a03343aa02f1ebd53049282cc271035",
+                "reference": "1615f3277a03343aa02f1ebd53049282cc271035",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Mjolnic\\Resthin": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Javier Aguilar",
+                    "homepage": "http://github.com/mjolnic"
+                }
+            ],
+            "description": "Lightweight RESTFul Client & Server library",
+            "keywords": [
+                "express",
+                "expressjs",
+                "http",
+                "request",
+                "response",
+                "rest",
+                "restful",
+                "router"
+            ],
+            "time": "2014-02-08 06:04:18"
+        },
+        {
+            "name": "smottt/wideimage",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/smottt/WideImage.git",
+                "reference": "9d0a3a14460c7b188fc3cd9c0ec7539489a84ddc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/smottt/WideImage/zipball/9d0a3a14460c7b188fc3cd9c0ec7539489a84ddc",
+                "reference": "9d0a3a14460c7b188fc3cd9c0ec7539489a84ddc",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "WideImage": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0",
+                "LGPL-2.1"
+            ],
+            "description": "An open-source PHP library for image manipulation. (With namespaces, PHP 5.3+)",
+            "homepage": "http://wideimage.sourceforge.net",
+            "time": "2012-09-03 11:14:31"
+        }
+    ],
+    "packages-dev": [
+
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "smottt/wideimage": 20
+    },
+    "platform": [
+
+    ],
+    "platform-dev": [
+
+    ]
+}

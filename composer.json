@@ -1,0 +1,13 @@
+{
+    "minimum-stability": "dev",
+    "require": {
+        "mjolnic/resthin": "1.1.0",
+        "smottt/wideimage": "dev-master"
+    },
+    "autoload": {
+        "psr-0": {"": "drumbs/src"}
+    },
+    "config": {
+        "vendor-dir": "drumbs/vendor"
+    }
+}
