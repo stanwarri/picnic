@@ -17,7 +17,7 @@ Width and height can be either a positive number greater than 0, A (for auto) or
 There are 2 reserved filter parameters: C (cover) and R (resize), but a custom filter
 can have a combination of 2 alphanumeric capital characters.
 
-When the file does not exists, the .htaccess automatically binds the request to *drumbs*,
+When the file does not exist, the .htaccess automatically binds the request to *drumbs*,
 where the new image will be generated if the format is valid (and allowed) and the original
 file exists in the parent folder.
 
@@ -31,10 +31,13 @@ Of course, the 'uploads' folder is only for demonstration purposes, you can use 
 ## Examples:
 
 * Cover (resize, center and crop)
-http://localhost/drumbs/uploads/200x500xR/demo.jpg
+
+<pre>http://localhost/drumbs/uploads/200x500xR/demo.jpg</pre>
 
 * Fit inside (resize)
-http://localhost/drumbs/uploads/200x500xC/demo.jpg
+
+<pre>http://localhost/drumbs/uploads/200x500xC/demo.jpg</pre>
 
 * Gray scale (custom filter)
-http://localhost/drumbs/uploads/NxNxBW/demo.jpg
+
+<pre>http://localhost/drumbs/uploads/NxNxBW/demo.jpg</pre>
