@@ -16,5 +16,5 @@ AddDefaultCharset utf-8
     RewriteCond %{REQUEST_FILENAME} !-d
   # You can use any regular expression to fit your folder naming needs, but
   # action parameters should be separated with underscores and have a prefix
-    RewriteRule .*\/th_[a-zA-Z0-9_]+\/(.*)\.(png|jpg|jpeg|gif)$ drumbs.php [L]
+    RewriteRule .*\/th-[a-z0-9A-Z]{1,10}(_[a-zA-Z0-9_]+)?\/(.*)\.(png|jpg|jpeg|gif)$ drumbs.php [L]
 </IfModule>

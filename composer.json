@@ -1,7 +1,7 @@
 {
     "name": "mjolnic/drumbs",
-    "description": "On-demand image manipulation tool for creating thumbs for your project assets on the fly",
-    "keywords": ["image", "thumbnail", "thumb", "gd", "wideimage", "assets"],
+    "description": "On-demand image manipulation tool with Laravel 4 support",
+    "keywords": ["image", "thumbnail", "thumb", "gd", "wideimage", "assets", "laravel4"],
     "license": "MIT",
     "authors": [
         {

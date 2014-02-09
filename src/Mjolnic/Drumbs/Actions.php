@@ -35,10 +35,13 @@ class Actions {
             return false;
         }
         if (count($task->params) < 3) {
-            return false;
+            $bg_color = $task->image->getColorAt(0, 0);
+        } else {
+            $bg_color = hexdec($task->params[2]);
         }
+
         $task->image->resize($task->params[0], $task->params[1], 'inside')
-                ->resizeCanvas($task->params[0], $task->params[1], 'center', 'center', hexdec($task->params[2]))
+                ->resizeCanvas($task->params[0], $task->params[1], 'center', 'center', $bg_color)
                 ->saveToFile($task->destFile);
     }
 
@@ -58,10 +61,7 @@ class Actions {
     }
 
     public static function autoCrop(Task $task) {
-        if (count($task->params) < 1) {
-            return false;
-        }
-        $task->image->autoCrop($task->params[0])
+        $task->image->autoCrop((count($task->params) < 1) ? 0 : $task->params[0])
                 ->saveToFile($task->destFile);
     }
 

@@ -21,21 +21,23 @@ mb_internal_encoding('UTF-8');
 
 require '../vendor/autoload.php';
 
-$actions = new Mjolnic\Drumbs\Actions();
+$actionsClass = '\\Mjolnic\\Drumbs\\Actions';
 $config = array(
     // Public path were the drumbs.php file is hosted
     'public_path' => realpath(__DIR__),
+    // Task prefix regular expression
+    'prefix_mask' => 'th-[a-z0-9A-Z]{1,10}', // this is used in laravel route
     // Regular expression of allowed original paths where images can be manipulated
     'path_mask' => '/.*/',
     // Allowed task names (or folders) and their actions (array keys are used inside a preg_match)
     'allowed_tasks' => array(
         // Commented for security reasons. Here are some demos:
-        "th_bw" => array($actions, 'grayscale'),
-        "th_150_150_ri" => array($actions, 'resizeInside'),
-        "th_150_150_ro" => array($actions, 'resizeOutside'),
-        "th_150_150_(FFFFFF|000000)_cn" => array($actions, 'resizeContainCentered'),
-        "th_(200_100|400_200|800_400)_cv" => array($actions, 'resizeCoverCentered'),
-        "th_0_ac" => array($actions, 'autoCrop'),
+        "th-bw" => array($actionsClass, 'grayscale'),
+        "th-ri_150_150" => array($actionsClass, 'resizeInside'),
+        "th-ro_150_150" => array($actionsClass, 'resizeOutside'),
+        "th-cn_150_150(_FFFFFF|_000000|_FF00AA)?" => array($actionsClass, 'resizeContainCentered'),
+        "th-cv_(200_100|400_200|800_400)" => array($actionsClass, 'resizeCoverCentered'),
+        "th-ac_0" => array($actionsClass, 'autoCrop'),
     )
 );
 
