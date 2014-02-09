@@ -11,6 +11,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
+        "php": ">=5.3.0",
         "smottt/wideimage": "dev-master"
     },
     "repositories": [
@@ -20,7 +21,9 @@
         }
     ],
     "autoload": {
-        "psr-0": {"Mjolnic\\Drumbs": "src"}
+        "psr-0": {
+            "Mjolnic\\Drumbs\\": "src/"
+        }
     },
     "config": {
         "vendor-dir": "vendor"

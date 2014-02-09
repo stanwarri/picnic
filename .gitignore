@@ -1,5 +1,7 @@
-/nbproject/
-/vendor/
-/demo/images/*/*
+/vendor
+composer.phar
 composer.lock
+.DS_Store
+/nbproject/
+/demo/images/*/*
 config.php

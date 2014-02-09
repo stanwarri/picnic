@@ -1,7 +1,7 @@
 drumbs
 ===========
 
-On-demand image manipulation for PHP 5.3+
+On-demand image manipulation for PHP 5.3+ (with Laravel 4 support)
 
 ![demo](https://raw.github.com/mjolnic/drumbs/master/demo/images/demo.jpg)
 
