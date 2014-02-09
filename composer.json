@@ -20,7 +20,7 @@
         }
     ],
     "autoload": {
-        "psr-0": {"\\Mjolnic\\Drumbs": "drumbs/src"}
+        "psr-0": {"Mjolnic\\Drumbs": "src"}
     },
     "config": {
         "vendor-dir": "vendor"
