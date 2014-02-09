@@ -8,36 +8,23 @@ The image is always sent over the HTTP server for better performance.
 
 ## How it works
 
-Considering you have an image located in /drumbs/uploads/demo.jpg, you can
+Considering you have an image located in /demo/images/demo.jpg, you can
 generate various versions on the fly by adding another segment before the filename.
 
-The format segment has 3 parts separated by 'x': width, height and filter.
-Width and height can be either a positive number greater than 0, A (for auto) or N (for none).
+This segment is the task name that will be used, and the parameters are separated
+by underscores.
 
-There are 2 reserved filter parameters: C (cover) and R (resize), but a custom filter
-can have a combination of 2 alphanumeric capital characters.
+Tasks names must have a prefix, as defined in the .htaccess demo and the config file.
 
 When the file does not exist, the .htaccess automatically binds the request to *drumbs*,
-where the new image will be generated if the format is valid (and allowed) and the original
+where the new image will be generated if the task name is valid (and allowed) and the original
 file exists in the parent folder.
 
 When it's done *drumbs* will refresh the request so Apache can handle and send the new image.
 If there's some errors or the request is not valid, a 404 error with an empty body is sent.
 
-Check the drumbs/config.php and filters.php to see the possibilities.
+Check the config.sample.php file and navigate to the demo/index.html page to see the possibilities.
 
-Of course, the 'uploads' folder is only for demonstration purposes, you can use drumbs with any folders.
+Drumbs comes with many predefined actions, but you can create your own.
 
-## Examples:
-
-* Cover (resize, center and crop)
-
-<pre>http://localhost/drumbs/uploads/200x500xR/demo.jpg</pre>
-
-* Fit inside (resize)
-
-<pre>http://localhost/drumbs/uploads/200x500xC/demo.jpg</pre>
-
-* Gray scale (custom filter)
-
-<pre>http://localhost/drumbs/uploads/NxNxBW/demo.jpg</pre>
+Of course, the 'demo/images' folder is only for demonstration purposes, you can use drumbs with any folders.

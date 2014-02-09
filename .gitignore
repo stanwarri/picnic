@@ -1,4 +1,5 @@
 /nbproject/
-/drumbs/vendor/
-/uploads/*/*
+/vendor/
+/demo/images/*/*
 composer.lock
+config.php

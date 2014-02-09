@@ -1,0 +1,19 @@
+# mjolnic/drumbs sample htaccess
+
+allow from all
+AddDefaultCharset utf-8
+
+<IfModule mod_rewrite.c>
+  # Uncomment one of the following if needed:
+  # Options +FollowSymlinks
+  # Options +SymLinksIfOwnerMatch
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+  # You can use any regular expression to fit your folder naming needs, but
+  # action parameters should be separated with underscores and have a prefix
+    RewriteRule .*\/th_[a-zA-Z0-9_]+\/(.*)\.(png|jpg|jpeg|gif)$ drumbs.php [L]
+</IfModule>

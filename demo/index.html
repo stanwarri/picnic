@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>mjolnic/drumbs demo</title>
+        <!--<link rel="shortcut icon" href="favicon.png">-->
+
+        <style type="text/css" id="relativecss">html,body{position:static}body *{position:relative}</style>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+
+        <!-- Optional Bootstrap theme -->
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+        
+        <style>
+            body{
+                margin: 0 0 0 200px;
+            }
+            h1{
+                font-size: 50px;
+            }
+            .demo-menu{
+                position: fixed;
+                left:0;
+                top:0;
+                bottom:0;
+                padding:10px 20px;
+                background:#fafafa;
+                z-index: 10;
+                width:200px;
+            }
+            .showcase{
+                margin:0 0 5em 0;
+                float:none;
+                clear:both;
+            }
+            .showcase .col-xs-6 a{
+                display:inline-block;
+            }
+            .showcase .col-xs-6 img{
+                border:1px solid #428bca;
+            }
+            .showcase .col-xs-6 a:after{
+                content:'original';
+                position: absolute;
+                bottom:-23px;
+                left:0;
+                color:#428bca;
+                z-index: 10;
+                right:0;
+                height:20px;
+                text-align: left;
+                font-size:13px;
+                font-style: italic;
+            }
+            .showcase .col-xs-6:last-child a:after{
+                content:attr(href);
+                text-align: right;
+            }
+        </style>
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+          <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+
+        <div class="container" style="margin:20px auto 100px auto">
+            <!-- Main component for a primary marketing message or call to action -->
+            <div class="callout">
+                <h1>Drumbs</h1>
+                <p>On demand image manipulation for PHP 5.3+</p>
+                <p>
+                    This tool generates images on the fly by request.
+                    The image is always sent over the HTTP server for better performance.
+                </p>
+                <p>
+                    <a class="btn btn-lg btn-primary" href="https://github.com/mjolnic/drumbs" role="button">View Github repository &raquo;</a>
+                </p>
+            </div>
+            <div class='demo-menu'>
+                <h2>Demos</h2>
+                <ul>
+                    <li><a href='#thbw'>Grayscale</a></li>
+                    <li><a href='#thri'>Resize inside</a></li>
+                    <li><a href='#thro'>Resize outside</a></li>
+                    <li><a href='#thcn'>Contain</a></li>
+                    <li><a href='#thcv'>Cover</a></li>
+                    <li><a href='#thac'>Autocrop</a></li>
+                </ul>
+            </div>
+            <div id='thbw' class='showcase'>
+                <div class='page-header'>
+                    <h3>Grayscale</h3>
+                </div>
+                <div class='row'>
+                    <div class='col-xs-6'>
+                        <a href='images/demo.jpg' target='_blank'><img class='img-responsive' src='images/demo.jpg' /></a>
+                    </div>
+                    <div class='col-xs-6'>
+                        <a href='images/th_bw/demo.jpg' target='_blank'><img class='img-responsive' src='images/th_bw/demo.jpg' /></a>
+                    </div>
+                </div>
+            </div>
+            <div id='thri' class='showcase'>
+                <div class='page-header'>
+                    <h3>Resize inside</h3>
+                </div>
+                <div class='row'>
+                    <div class='col-xs-6'>
+                        <a href='images/demo.jpg' target='_blank'><img class='img-responsive' src='images/demo.jpg' /></a>
+                    </div>
+                    <div class='col-xs-6'>
+                        <a href='images/th_150_150_ri/demo.jpg' target='_blank'><img class='img-responsive' src='images/th_150_150_ri/demo.jpg' /></a>
+                    </div>
+                </div>
+            </div>
+            <div id='thro' class='showcase'>
+                <div class='page-header'>
+                    <h3>Resize outside</h3>
+                </div>
+                <div class='row'>
+                    <div class='col-xs-6'>
+                        <a href='images/demo.jpg' target='_blank'><img class='img-responsive' src='images/demo.jpg' /></a>
+                    </div>
+                    <div class='col-xs-6'>
+                        <a href='images/th_150_150_ro/demo.jpg' target='_blank'><img class='img-responsive' src='images/th_150_150_ro/demo.jpg' /></a>
+                    </div>
+                </div>
+            </div>
+            <div id='thcn' class='showcase'>
+                <div class='page-header'>
+                    <h3>Contain <small>(resize + resizeCanvas + center)</small></h3>
+                </div>
+                <div class='row'>
+                    <div class='col-xs-6'>
+                        <a href='images/demo.jpg' target='_blank'><img class='img-responsive' src='images/demo.jpg' /></a>
+                    </div>
+                    <div class='col-xs-6'>
+                        <a href='images/th_150_150_000000_cn/demo.jpg' target='_blank'><img class='img-responsive' src='images/th_150_150_000000_cn/demo.jpg' /></a>
+                    </div>
+                </div>
+            </div>
+            <div id='thcv' class='showcase'>
+                <div class='page-header'>
+                    <h3>Cover <small>(resize + center + crop)</small></h3>
+                </div>
+                <div class='row'>
+                    <div class='col-xs-6'>
+                        <a href='images/demo.jpg' target='_blank'><img class='img-responsive' src='images/demo.jpg' /></a>
+                    </div>
+                    <div class='col-xs-6'>
+                        <a href='images/th_800_400_cv/demo.jpg' target='_blank'><img class='img-responsive' src='images/th_800_400_cv/demo.jpg' /></a>
+                    </div>
+                </div>
+            </div>
+            <div id='thac' class='showcase'>
+                <div class='page-header'>
+                    <h3>Autocrop <small>(removes whitespace)</small></h3>
+                </div>
+                <div class='row'>
+                    <div class='col-xs-6'>
+                        <a href='images/demo.jpg' target='_blank'><img class='img-responsive' src='images/demo.jpg' /></a>
+                    </div>
+                    <div class='col-xs-6'>
+                        <a href='images/th_0_ac/demo.jpg' target='_blank'><img class='img-responsive' src='images/th_0_ac/demo.jpg' /></a>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- /container -->
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    </body>
+</html>
