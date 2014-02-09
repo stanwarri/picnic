@@ -3,6 +3,8 @@ drumbs
 
 On demand image manipulation for PHP 5.3+
 
+![demo](https://raw.github.com/mjolnic/drumbs/master/demo/images/demo.jpg)
+
 This tool generates images on the fly by request.
 The image is always sent over the HTTP server for better performance.
 
