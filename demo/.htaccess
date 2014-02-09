@@ -1,4 +1,5 @@
 # mjolnic/drumbs sample htaccess
+# This file is not needed if you use drumbs as a Laravel 4 package
 
 allow from all
 AddDefaultCharset utf-8

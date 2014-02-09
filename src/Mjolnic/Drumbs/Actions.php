@@ -7,11 +7,11 @@ namespace Mjolnic\Drumbs;
  */
 class Actions {
 
-    public function grayscale(Task $task) {
+    public static function grayscale(Task $task) {
         $task->image->asGrayscale()->saveToFile($task->destFile);
     }
 
-    public function resizeInside(Task $task) {
+    public static function resizeInside(Task $task) {
         $task->params = self::parseDimensions($task->params);
         if ($task->params == false) {
             return false;
@@ -20,7 +20,7 @@ class Actions {
                 ->saveToFile($task->destFile);
     }
 
-    public function resizeOutside(Task $task) {
+    public static function resizeOutside(Task $task) {
         $task->params = self::parseDimensions($task->params);
         if ($task->params == false) {
             return false;
@@ -29,7 +29,7 @@ class Actions {
                 ->saveToFile($task->destFile);
     }
 
-    public function resizeContainCentered(Task $task) {
+    public static function resizeContainCentered(Task $task) {
         $task->params = self::parseDimensions($task->params);
         if ($task->params == false) {
             return false;
@@ -47,7 +47,7 @@ class Actions {
      * @param \Mjolnic\Drumbs\Task $task
      * @return boolean
      */
-    public function resizeCoverCentered(Task $task) {
+    public static function resizeCoverCentered(Task $task) {
         $task->params = self::parseDimensions($task->params);
         if ($task->params == false) {
             return false;
@@ -57,7 +57,7 @@ class Actions {
                 ->saveToFile($task->destFile);
     }
 
-    public function autoCrop(Task $task) {
+    public static function autoCrop(Task $task) {
         if (count($task->params) < 1) {
             return false;
         }

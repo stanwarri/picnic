@@ -19,14 +19,14 @@ class Server extends \Mjolnic\Drumbs\Request {
         if (empty($task)) {
             $task = new Task($this->path, $this->filename, $this->extension, $this->config['public_path']);
         }
-
+        
         // Can we read the original file and write in the original path?
         if (!$task->isValid()) {
             return $this->halt();
         }
-
+        
         // Can we operate in this path?
-        if (!preg_match($this->config['path_mask'], str_replace($this->config['public_path'], '', $task->origPath))) {
+        if (!preg_match($this->config['path_mask'], trim(str_replace($this->config['public_path'], '', $task->origPath), DIRECTORY_SEPARATOR))) {
             return $this->halt();
         }
 
