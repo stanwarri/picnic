@@ -7,29 +7,7 @@ namespace Mjolnic\Drumbs;
  */
 class Actions {
 
-    public static function parseDimensions(array $params) {
-        if (count($params) < 2) {
-            return false;
-        }
-        if (!is_numeric($params[0]) or !is_numeric($params[1])) {
-            return false;
-        }
-        if ($params[0] == 0) {
-            $params[0] = null; // null means auto
-        } else {
-            $params[0] = intval($params[0]);
-        }
-        if ($params[1] == 0) {
-            $params[1] = null; // null means auto
-        } else {
-            $params[1] = intval($params[1]);
-        }
-
-        return $params;
-    }
-
     public function grayscale(Task $task) {
-        //var_dump($task);die();
         $task->image->asGrayscale()->saveToFile($task->destFile);
     }
 
@@ -85,6 +63,27 @@ class Actions {
         }
         $task->image->autoCrop($task->params[0])
                 ->saveToFile($task->destFile);
+    }
+
+    protected static function parseDimensions(array $params) {
+        if (count($params) < 2) {
+            return false;
+        }
+        if (!is_numeric($params[0]) or !is_numeric($params[1])) {
+            return false;
+        }
+        if ($params[0] == 0) {
+            $params[0] = null; // null means auto
+        } else {
+            $params[0] = intval($params[0]);
+        }
+        if ($params[1] == 0) {
+            $params[1] = null; // null means auto
+        } else {
+            $params[1] = intval($params[1]);
+        }
+
+        return $params;
     }
 
 }
