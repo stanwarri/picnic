@@ -1,6 +1,6 @@
 {
     "name": "mjolnic/drumbs",
-    "description": "On demand image manipulation for PHP 5.3+",
+    "description": "On-demand image manipulation tool for creating thumbs for your project assets on the fly",
     "keywords": ["image", "thumbnail", "thumb", "gd", "wideimage", "assets"],
     "license": "MIT",
     "authors": [
