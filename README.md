@@ -1,11 +1,13 @@
 drumbs
 ===========
 
-On demand image manipulation for PHP 5.3+
+On-demand image manipulation for PHP 5.3+
 
 ![demo](https://raw.github.com/mjolnic/drumbs/master/demo/images/demo.jpg)
 
-This tool generates images on the fly by request.
+This tool generates thumbnails (drum\*b\*s) or/and adds effects to an image, on the fly by request,
+using the WideImage library.
+
 The image is always sent over the HTTP server for better performance.
 
 ## How it works
