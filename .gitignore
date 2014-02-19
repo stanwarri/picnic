@@ -2,6 +2,5 @@
 composer.phar
 composer.lock
 .DS_Store
-/nbproject/
 /demo/images/*/*
-config.php
+/nbproject/private
