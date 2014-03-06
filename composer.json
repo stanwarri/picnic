@@ -1,5 +1,5 @@
 {
-    "name": "mjolnic/drumbs",
+    "name": "mjolnic/thumbs",
     "description": "On-demand image manipulation tool with Laravel 4 support",
     "keywords": ["image", "thumbnail", "thumb", "gd", "wideimage", "assets", "laravel4"],
     "license": "MIT",
@@ -22,7 +22,7 @@
     ],
     "autoload": {
         "psr-0": {
-            "Mjolnic\\Drumbs\\": "src/"
+            "Mjolnic\\Thumbs\\": "src/"
         }
     },
     "config": {

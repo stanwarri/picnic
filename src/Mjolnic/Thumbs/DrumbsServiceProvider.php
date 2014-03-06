@@ -1,10 +1,10 @@
 <?php
 
-namespace Mjolnic\Drumbs;
+namespace Mjolnic\Thumbs;
 
 use Illuminate\Support\ServiceProvider;
 
-class DrumbsServiceProvider extends ServiceProvider {
+class ThumbsServiceProvider extends ServiceProvider {
 
     /**
      * Indicates if loading of the provider is deferred.
@@ -19,7 +19,7 @@ class DrumbsServiceProvider extends ServiceProvider {
      * @return void
      */
     public function boot() {
-        $this->package('mjolnic/drumbs', 'drumbs');
+        $this->package('mjolnic/thumbs', 'thumbs');
         include __DIR__.'/../../routes.php';
     }
 

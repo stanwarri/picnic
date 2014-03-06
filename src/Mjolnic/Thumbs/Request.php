@@ -1,6 +1,6 @@
 <?php
 
-namespace Mjolnic\Drumbs;
+namespace Mjolnic\Thumbs;
 
 class Request {
 

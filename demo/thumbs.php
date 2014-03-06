@@ -21,9 +21,9 @@ mb_internal_encoding('UTF-8');
 
 require '../vendor/autoload.php';
 
-$actionsClass = '\\Mjolnic\\Drumbs\\Actions';
+$actionsClass = '\\Mjolnic\\Thumbs\\Actions';
 $config = array(
-    // Public path were the drumbs.php file is hosted
+    // Public path were the thumbs.php file is hosted
     'public_path' => realpath(__DIR__),
     // Task prefix regular expression
     'prefix_mask' => 'th-[a-z0-9A-Z]{1,10}', // this is used in laravel route
@@ -41,11 +41,11 @@ $config = array(
     )
 );
 
-$drumbs = new \Mjolnic\Drumbs\Server($config);
+$thumbs = new \Mjolnic\Thumbs\Server($config);
 
 try {
-    $drumbs->process();
+    $thumbs->process();
 } catch (Exception $exc) {
     error_log($exc->getTraceAsString());
-    $drumbs->halt();
+    $thumbs->halt();
 }

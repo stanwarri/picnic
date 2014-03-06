@@ -1,8 +1,8 @@
 <?php
 
-namespace Mjolnic\Drumbs;
+namespace Mjolnic\Thumbs;
 
-class Server extends \Mjolnic\Drumbs\Request {
+class Server extends \Mjolnic\Thumbs\Request {
 
     /**
      *

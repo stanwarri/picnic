@@ -1,6 +1,6 @@
 <?php
 
-namespace Mjolnic\Drumbs;
+namespace Mjolnic\Thumbs;
 
 /**
  * Predefined actions
@@ -47,7 +47,7 @@ class Actions {
 
     /**
      * Cover: Resize, center and crop
-     * @param \Mjolnic\Drumbs\Task $task
+     * @param \Mjolnic\Thumbs\Task $task
      * @return boolean
      */
     public static function resizeCoverCentered(Task $task) {

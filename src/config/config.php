@@ -2,10 +2,10 @@
 
 // Sample configuration file for Laravel 4
 
-$actionsClass = '\\Mjolnic\\Drumbs\\Actions';
+$actionsClass = '\\Mjolnic\\Thumbs\\Actions';
 
 return array(
-    // Public path were the drumbs.php file is hosted
+    // Public path were the thumbs.php file is hosted
     'public_path' => public_path(),
     // Task prefix regular expression
     'prefix_mask' => 'th-[a-z0-9A-Z]{1,10}', // this is used in laravel route
