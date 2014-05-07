@@ -1,8 +1,8 @@
 <?php
 
-namespace Mjolnic\Thumbs;
+namespace Thor\Pixilate;
 
-class Server extends \Mjolnic\Thumbs\Request {
+class Server extends Request {
 
     /**
      *

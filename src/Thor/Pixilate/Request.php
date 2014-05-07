@@ -1,6 +1,6 @@
 <?php
 
-namespace Mjolnic\Thumbs;
+namespace Thor\Pixilate;
 
 class Request {
 

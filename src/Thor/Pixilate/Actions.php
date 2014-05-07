@@ -1,6 +1,6 @@
 <?php
 
-namespace Mjolnic\Thumbs;
+namespace Thor\Pixilate;
 
 /**
  * Predefined actions
@@ -47,7 +47,7 @@ class Actions {
 
     /**
      * Cover: Resize, center and crop
-     * @param \Mjolnic\Thumbs\Task $task
+     * @param Task $task
      * @return boolean
      */
     public static function resizeCoverCentered(Task $task) {

@@ -21,9 +21,9 @@ mb_internal_encoding('UTF-8');
 
 require '../vendor/autoload.php';
 
-$actionsClass = '\\Mjolnic\\Thumbs\\Actions';
+$actionsClass = '\\Thor\\Pixilate\\Actions';
 $config = array(
-    // Public path were the thumbs.php file is hosted
+    // Public path were the pixilate.php file is hosted
     'public_path' => realpath(__DIR__),
     // Task prefix regular expression
     'prefix_mask' => 'th-[a-z0-9A-Z]{1,10}', // this is used in laravel route
@@ -41,11 +41,11 @@ $config = array(
     )
 );
 
-$thumbs = new \Mjolnic\Thumbs\Server($config);
+$pixilate = new \Thor\Pixilate\Server($config);
 
 try {
-    $thumbs->process();
+    $pixilate->process();
 } catch (Exception $exc) {
     error_log($exc->getTraceAsString());
-    $thumbs->halt();
+    $pixilate->halt();
 }

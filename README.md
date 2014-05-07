@@ -1,9 +1,7 @@
-Thumbs
+thorfw/pixilate
 ===========
 
 On-demand image manipulation for PHP 5.3+ (with Laravel 4 support)
-
-![demo](https://raw.github.com/mjolnic/thumbs/master/demo/images/demo.jpg)
 
 This tool generates thumbnails or/and adds effects to an image, on the fly by request,
 using the WideImage library.
@@ -16,13 +14,13 @@ You can either use it in standalone mode like in the demo folder, or as a Larave
 
 In the `require` key of `composer.json` file add the following
 
-    "mjolnic/thumbs": "dev-master"
+    "thorfw/pixilate": "dev-master"
 
 Run the Composer update comand
 
     $ composer update
 
-In your `config/app.php` add `'Mjolnic\Thumbs\ThumbsServiceProvider'` to the end of the `$providers` array
+In your `config/app.php` add `'Thor\Pixilate\PixilateServiceProvider'` to the end of the `$providers` array
 it will bind the required route for you.
 
 ```php
@@ -31,7 +29,7 @@ it will bind the required route for you.
     'Illuminate\Foundation\Providers\ArtisanServiceProvider',
     'Illuminate\Auth\AuthServiceProvider',
     ...
-    'Mjolnic\Thumbs\ThumbsServiceProvider',
+    'Thor\Pixilate\PixilateServiceProvider',
 
 ),
 ```
@@ -46,15 +44,15 @@ by underscores.
 
 Tasks names must have a prefix, e.g. th_, thumb_, th-something_, etc.
 
-When the file does not exist, the .htaccess (or the router in laravel) automatically binds the request to *thumbs*,
+When the file does not exist, the .htaccess (or the router in laravel) automatically binds the request to *Pixilate*,
 where the new image will be generated if the task name is valid (and allowed) and the original
 file exists in the parent folder.
 
-When it's done *thumbs* will refresh the request so the HTTP server can handle and send the new image.
+When it's done *Pixilate* will refresh the request so the HTTP server can handle and send the new image.
 If there's some errors or the request is not valid, a 404 error with an empty body is sent.
 
-Check the demo/thumbs.php file and **navigate to the demo/index.html page** to see the possibilities.
+Check the demo/pixilate.php file and **navigate to the demo/index.html page** to see the possibilities.
 
-Thumbs comes with many predefined actions, but you can create your own.
+Pixilate comes with many predefined actions, but you can create your own.
 
-Of course, the 'demo/images' folder is only for demonstration purposes, you can use *thumbs* with any folders.
+Of course, the 'demo/images' folder is only for demonstration purposes, you can use *Pixilate* with any folders.

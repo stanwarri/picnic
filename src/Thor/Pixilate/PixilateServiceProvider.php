@@ -1,10 +1,10 @@
 <?php
 
-namespace Mjolnic\Thumbs;
+namespace Thor\Pixilate;
 
 use Illuminate\Support\ServiceProvider;
 
-class ThumbsServiceProvider extends ServiceProvider {
+class PixilateServiceProvider extends ServiceProvider {
 
     /**
      * Indicates if loading of the provider is deferred.
@@ -19,7 +19,7 @@ class ThumbsServiceProvider extends ServiceProvider {
      * @return void
      */
     public function boot() {
-        $this->package('mjolnic/thumbs', 'thumbs');
+        $this->package('thorfw/pixilate', 'pixilate');
         include __DIR__.'/../../routes.php';
     }
 
