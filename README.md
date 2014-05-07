@@ -1,12 +1,12 @@
-thorfw/pixilate
+Pixilate
 ===========
 
-On-demand image manipulation for PHP 5.3+ (with Laravel 4 support)
+On-demand image manipulation for PHP 5.3+
 
 This tool generates thumbnails or/and adds effects to an image, on the fly by request,
 using the WideImage library.
 
-The image is always sent over the HTTP server for better performance.
+It can be used standalone or as a Laravel 4 package.
 
 ## Setup
 
@@ -18,7 +18,7 @@ In the `require` key of `composer.json` file add the following
 
 Run the Composer update comand
 
-    $ composer update
+    composer update
 
 In your `config/app.php` add `'Thor\Pixilate\PixilateServiceProvider'` to the end of the `$providers` array
 it will bind the required route for you.
@@ -51,8 +51,8 @@ file exists in the parent folder.
 When it's done *Pixilate* will refresh the request so the HTTP server can handle and send the new image.
 If there's some errors or the request is not valid, a 404 error with an empty body is sent.
 
-Check the demo/pixilate.php file and **navigate to the demo/index.html page** to see the possibilities.
+Check the `demo/pixilate.php` file and **navigate to the demo/index.html page** to see the possibilities.
 
-Pixilate comes with many predefined actions, but you can create your own.
+*Pixilate* comes with many predefined actions, but you can create your own.
 
 Of course, the 'demo/images' folder is only for demonstration purposes, you can use *Pixilate* with any folders.
