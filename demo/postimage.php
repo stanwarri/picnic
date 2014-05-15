@@ -21,9 +21,9 @@ mb_internal_encoding('UTF-8');
 
 require '../vendor/autoload.php';
 
-$actionsClass = '\\Thor\\Pixilate\\Actions';
+$actionsClass = '\\Thor\\Postimage\\Actions';
 $config = array(
-    // Public path were the pixilate.php file is hosted
+    // Public path were the postimage.php file is hosted
     'public_path' => realpath(__DIR__),
     // Task prefix regular expression
     'prefix_mask' => 'th-[a-z0-9A-Z]{1,10}', // this is used in laravel route
@@ -41,11 +41,11 @@ $config = array(
     )
 );
 
-$pixilate = new \Thor\Pixilate\Server($config);
+$postimage = new \Thor\Postimage\Server($config);
 
 try {
-    $pixilate->process();
+    $postimage->process();
 } catch (Exception $exc) {
     error_log($exc->getTraceAsString());
-    $pixilate->halt();
+    $postimage->halt();
 }

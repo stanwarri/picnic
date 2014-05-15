@@ -1,12 +1,12 @@
 <?php
 
 Route::get('/{path}/{prefix}{task?}/{filename}', function($path, $prefix, $task, $filename) {
-    $pixilate = new \Thor\Pixilate\Server(array(
-        'public_path' => Config::get('pixilate::public_path'),
-        'path_mask' => Config::get('pixilate::path_mask'),
-        'allowed_tasks' => Config::get('pixilate::allowed_tasks')
+    $postimage = new \Thor\Postimage\Server(array(
+        'public_path' => Config::get('postimage::public_path'),
+        'path_mask' => Config::get('postimage::path_mask'),
+        'allowed_tasks' => Config::get('postimage::allowed_tasks')
     ));
-    $pixilate->process();
-})->where(array('path' => trim(Config::get('pixilate::path_mask'), '/'),
-    'prefix' => Config::get('pixilate::prefix_mask'), 'task' => '[a-zA-Z0-9_]+',
+    $postimage->process();
+})->where(array('path' => trim(Config::get('postimage::path_mask'), '/'),
+    'prefix' => Config::get('postimage::prefix_mask'), 'task' => '[a-zA-Z0-9_]+',
     'filename' => '(.*)\.(png|jpg|jpeg|gif)'));

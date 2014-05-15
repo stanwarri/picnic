@@ -3,4 +3,4 @@ composer.phar
 composer.lock
 .DS_Store
 /demo/images/*/*
-/nbproject/private
+/nbproject/

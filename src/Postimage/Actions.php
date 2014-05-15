@@ -1,6 +1,6 @@
 <?php
 
-namespace Thor\Pixilate;
+namespace Thor\Postimage;
 
 /**
  * Predefined actions

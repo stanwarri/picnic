@@ -1,6 +1,6 @@
 {
-    "name": "thorfw/pixilate",
-    "description": "Laravel 4 on-demand image manipulation package",
+    "name": "thor/postimage",
+    "description": "Laravel 4 On Demand Image Post-processing package (Image manipulation on the fly).",
     "keywords": ["thumbnail", "thumb", "wideimage", "assets", "laravel", "thorfw", "thor"],
     "license": "MIT",
     "authors": [
@@ -16,8 +16,8 @@
         "smottt/wideimage": "dev-master"
     },
     "autoload": {
-        "psr-0": {
-            "Thor\\Pixilate\\": "src/"
+        "psr-4": {
+            "Thor\\Postimage\\": "src/Postimage"
         }
     },
     "config": {
