@@ -10,9 +10,9 @@
             "role": "Developer"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
-        "php": ">=5.3.0",
+        "php": ">=5.3.7",
+        "illuminate/support": "4.1.*",
         "smottt/wideimage": "dev-master"
     },
     "autoload": {
@@ -22,5 +22,7 @@
     },
     "config": {
         "vendor-dir": "vendor"
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
