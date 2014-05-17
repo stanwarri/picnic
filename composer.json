@@ -1,5 +1,5 @@
 {
-    "name": "thor/postimage",
+    "name": "thor/picnice",
     "description": "Laravel 4 On Demand Image Post-processing package (Image manipulation on the fly).",
     "keywords": ["thumbnail", "thumb", "wideimage", "assets", "laravel", "thorfw", "thor"],
     "license": "MIT",
@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Thor\\Postimage\\": "src/Postimage"
+            "Thor\\Picnice\\": "src/Picnice"
         }
     },
     "config": {

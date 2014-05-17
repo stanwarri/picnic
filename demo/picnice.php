@@ -21,9 +21,9 @@ mb_internal_encoding('UTF-8');
 
 require '../vendor/autoload.php';
 
-$actionsClass = '\\Thor\\Postimage\\Actions';
+$actionsClass = '\\Thor\\Picnice\\Actions';
 $config = array(
-    // Public path were the postimage.php file is hosted
+    // Public path were the picnice.php file is hosted
     'public_path' => realpath(__DIR__),
     // Task prefix regular expression
     'prefix_mask' => 'th-[a-z0-9A-Z]{1,10}', // this is used in laravel route
@@ -41,11 +41,11 @@ $config = array(
     )
 );
 
-$postimage = new \Thor\Postimage\Server($config);
+$picnice = new \Thor\Picnice\Server($config);
 
 try {
-    $postimage->process();
+    $picnice->process();
 } catch (Exception $exc) {
     error_log($exc->getTraceAsString());
-    $postimage->halt();
+    $picnice->halt();
 }

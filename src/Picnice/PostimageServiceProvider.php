@@ -1,10 +1,10 @@
 <?php
 
-namespace Thor\Postimage;
+namespace Thor\Picnice;
 
 use Illuminate\Support\ServiceProvider;
 
-class PostimageServiceProvider extends ServiceProvider {
+class PicniceServiceProvider extends ServiceProvider {
 
     /**
      * Indicates if loading of the provider is deferred.
@@ -19,7 +19,7 @@ class PostimageServiceProvider extends ServiceProvider {
      * @return void
      */
     public function boot() {
-        $this->package('thor/postimage', 'postimage');
+        $this->package('thor/picnice', 'picnice');
         include __DIR__.'/../../routes.php';
     }
 

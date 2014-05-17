@@ -1,6 +1,6 @@
 <?php
 
-namespace Thor\Postimage;
+namespace Thor\Picnice;
 
 class Server extends Request {
 

@@ -1,4 +1,4 @@
-thor/postimage
+thor/picnice
 =====
 
 Laravel 4 On Demand Image Post-processing package (Image manipulation on the fly).
@@ -14,13 +14,13 @@ You can either use it in standalone mode like in the demo folder, or as a Larave
 
 In the `require` key of `composer.json` file add the following
 
-    "thor/postimage": "dev-master"
+    "thor/picnice": "dev-master"
 
 Run the Composer update comand
 
     composer update
 
-In your `config/app.php` add `'Thor\Postimage\PostimageServiceProvider'` to the end of the `$providers` array
+In your `config/app.php` add `'Thor\Picnice\PicniceServiceProvider'` to the end of the `$providers` array
 it will bind the required route for you.
 
 ```php
@@ -29,7 +29,7 @@ it will bind the required route for you.
     'Illuminate\Foundation\Providers\ArtisanServiceProvider',
     'Illuminate\Auth\AuthServiceProvider',
     ...
-    'Thor\Postimage\PostimageServiceProvider',
+    'Thor\Picnice\PicniceServiceProvider',
 
 ),
 ```
@@ -44,15 +44,15 @@ by underscores.
 
 Tasks names must have a prefix, e.g. th_, thumb_, th-something_, etc.
 
-When the file does not exist, the .htaccess (or the router in laravel) automatically binds the request to *Postimage*,
+When the file does not exist, the .htaccess (or the router in laravel) automatically binds the request to *Picnice*,
 where the new image will be generated if the task name is valid (and allowed) and the original
 file exists in the parent folder.
 
-When it's done *Postimage* will refresh the request so the HTTP server can handle and send the new image.
+When it's done *Picnice* will refresh the request so the HTTP server can handle and send the new image.
 If there's some errors or the request is not valid, a 404 error with an empty body is sent.
 
-Check the `demo/postimage.php` file and **navigate to the demo/index.html page** to see the possibilities.
+Check the `demo/picnice.php` file and **navigate to the demo/index.html page** to see the possibilities.
 
-*Postimage* comes with many predefined actions, but you can create your own.
+*Picnice* comes with many predefined actions, but you can create your own.
 
-Of course, the 'demo/images' folder is only for demonstration purposes, you can use *Postimage* with any folders.
+Of course, the 'demo/images' folder is only for demonstration purposes, you can use *Picnice* with any folders.
