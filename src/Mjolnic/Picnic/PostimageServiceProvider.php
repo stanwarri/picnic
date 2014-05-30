@@ -1,10 +1,10 @@
 <?php
 
-namespace Thor\Picnice;
+namespace Mjolnic\Picnic;
 
 use Illuminate\Support\ServiceProvider;
 
-class PicniceServiceProvider extends ServiceProvider {
+class PicnicServiceProvider extends ServiceProvider {
 
     /**
      * Indicates if loading of the provider is deferred.
@@ -19,7 +19,7 @@ class PicniceServiceProvider extends ServiceProvider {
      * @return void
      */
     public function boot() {
-        $this->package('thor/picnice', 'picnice');
+        $this->package('mjolnic/picnic', 'picnic');
         include __DIR__.'/../../routes.php';
     }
 

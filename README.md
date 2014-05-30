@@ -1,4 +1,4 @@
-thor/picnice
+Picnic
 =====
 
 Laravel 4 On Demand Image Post-processing package (Image manipulation on the fly).
@@ -14,13 +14,13 @@ You can either use it in standalone mode like in the demo folder, or as a Larave
 
 In the `require` key of `composer.json` file add the following
 
-    "thor/picnice": "dev-master"
+    "mjolnic/picnic": "dev-master"
 
 Run the Composer update comand
 
     composer update
 
-In your `config/app.php` add `'Thor\Picnice\PicniceServiceProvider'` to the end of the `$providers` array
+In your `config/app.php` add `'Mjolnic\Picnic\PicnicServiceProvider'` to the end of the `$providers` array
 it will bind the required route for you.
 
 ```php
@@ -29,7 +29,7 @@ it will bind the required route for you.
     'Illuminate\Foundation\Providers\ArtisanServiceProvider',
     'Illuminate\Auth\AuthServiceProvider',
     ...
-    'Thor\Picnice\PicniceServiceProvider',
+    'Mjolnic\Picnic\PicnicServiceProvider',
 
 ),
 ```
@@ -44,15 +44,15 @@ by underscores.
 
 Tasks names must have a prefix, e.g. th_, thumb_, th-something_, etc.
 
-When the file does not exist, the .htaccess (or the router in laravel) automatically binds the request to *Picnice*,
+When the file does not exist, the .htaccess (or the router in laravel) automatically binds the request to *Picnic*,
 where the new image will be generated if the task name is valid (and allowed) and the original
 file exists in the parent folder.
 
-When it's done *Picnice* will refresh the request so the HTTP server can handle and send the new image.
+When it's done *Picnic* will refresh the request so the HTTP server can handle and send the new image.
 If there's some errors or the request is not valid, a 404 error with an empty body is sent.
 
-Check the `demo/picnice.php` file and **navigate to the demo/index.html page** to see the possibilities.
+Check the `demo/picnic.php` file and **navigate to the demo/index.html page** to see the possibilities.
 
-*Picnice* comes with many predefined actions, but you can create your own.
+*Picnic* comes with many predefined actions, but you can create your own.
 
-Of course, the 'demo/images' folder is only for demonstration purposes, you can use *Picnice* with any folders.
+Of course, the 'demo/images' folder is only for demonstration purposes, you can use *Picnic* with any folders.

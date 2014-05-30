@@ -21,9 +21,9 @@ mb_internal_encoding('UTF-8');
 
 require '../vendor/autoload.php';
 
-$actionsClass = '\\Thor\\Picnice\\Actions';
+$actionsClass = '\\Mjolnic\\Picnic\\Actions';
 $config = array(
-    // Public path were the picnice.php file is hosted
+    // Public path were the picnic.php file is hosted
     'public_path' => realpath(__DIR__),
     // Task prefix regular expression
     'prefix_mask' => 'th-[a-z0-9A-Z]{1,10}', // this is used in laravel route
@@ -41,11 +41,11 @@ $config = array(
     )
 );
 
-$picnice = new \Thor\Picnice\Server($config);
+$picnic = new \Mjolnic\Picnic\Server($config);
 
 try {
-    $picnice->process();
+    $picnic->process();
 } catch (Exception $exc) {
     error_log($exc->getTraceAsString());
-    $picnice->halt();
+    $picnic->halt();
 }

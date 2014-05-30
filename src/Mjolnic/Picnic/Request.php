@@ -1,6 +1,6 @@
 <?php
 
-namespace Thor\Picnice;
+namespace Mjolnic\Picnic;
 
 class Request {
 

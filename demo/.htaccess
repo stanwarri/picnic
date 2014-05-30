@@ -1,4 +1,4 @@
-# thor/picnice sample htaccess
+# mjolnic/picnic sample htaccess
 # This file is not needed if you use Postimage as a Laravel 4 package
 
 allow from all
@@ -16,5 +16,5 @@ AddDefaultCharset utf-8
     RewriteCond %{REQUEST_FILENAME} !-d
   # You can use any regular expression to fit your folder naming needs, but
   # action parameters should be separated with underscores and have a prefix
-    RewriteRule .*\/th-[a-z0-9A-Z]{1,10}(_[a-zA-Z0-9_]+)?\/(.*)\.(png|jpg|jpeg|gif)$ picnice.php [L]
+    RewriteRule .*\/th-[a-z0-9A-Z]{1,10}(_[a-zA-Z0-9_]+)?\/(.*)\.(png|jpg|jpeg|gif)$ picnic.php [L]
 </IfModule>

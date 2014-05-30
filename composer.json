@@ -1,7 +1,7 @@
 {
-    "name": "thor/picnice",
+    "name": "mjolnic/picnic",
     "description": "Laravel 4 On Demand Image Post-processing package (Image manipulation on the fly).",
-    "keywords": ["thumbnail", "thumb", "wideimage", "assets", "laravel", "thorfw", "thor"],
+    "keywords": ["thumbnail", "thumb", "wideimage", "assets", "laravel", "thorcms"],
     "license": "MIT",
     "authors": [
         {
@@ -16,8 +16,8 @@
         "smottt/wideimage": "dev-master"
     },
     "autoload": {
-        "psr-4": {
-            "Thor\\Picnice\\": "src/Picnice"
+        "psr-0": {
+            "Mjolnic\\Picnic\\": "src"
         }
     },
     "config": {
