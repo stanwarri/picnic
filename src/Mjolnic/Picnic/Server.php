@@ -37,7 +37,7 @@ class Server extends Request {
         } else {
             $task->image = \WideImage\WideImage::load($task->origFile);
             // Create destination path
-            if (!is_dir($task->destPath)) {
+            if (!file_exists($task->destPath) and !is_dir($task->destPath)) {
                 @mkdir($task->destPath, 0775, true);
             }
             if (call_user_func($callable, $task) !== false) { // If the action does not return false explicitly...
