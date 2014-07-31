@@ -12,7 +12,7 @@
     ],
     "require": {
         "php": ">=5.3.7",
-        "illuminate/support": "4.1.*",
+        "illuminate/support": "4.2.*",
         "smottt/wideimage": "dev-master"
     },
     "autoload": {
